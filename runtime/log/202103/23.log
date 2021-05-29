@@ -1,0 +1,10 @@
+---------------------------------------------------------------
+[ 2021-03-23T05:35:00+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.042770s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.036093s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000386s ]
+---------------------------------------------------------------
+[ 2021-03-23T10:54:58+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.013167s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.026206s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000398s ]

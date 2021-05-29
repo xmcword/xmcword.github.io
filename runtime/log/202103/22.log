@@ -1,0 +1,389 @@
+---------------------------------------------------------------
+[ 2021-03-22T11:07:47+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.031349s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.043580s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.065809s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000432s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.003198s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:07:53+08:00 ] 127.0.0.1 POST 127.0.0.1:1200/kmad/login
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014033s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.061416s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `token`='dccb8d20380ea1df46b96f4bd6e1a2f7'  WHERE  `id` = 1 [ RunTime:0.000838s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:07:54+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004155s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.038291s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.063699s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.002118s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.001195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.036134s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:07:58+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/admin
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012538s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.048883s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` LIMIT 1 [ RunTime:0.000552s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:08:06+08:00 ] 127.0.0.1 POST 127.0.0.1:1200/kmad/admin
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012289s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.030441s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `apppwd`='399c86d19128919296285c7e5936a14d'  WHERE  `id` = 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `username`='admin',`mailu`='1147828541',`mailp`='vtpjlgpoqftrifhg',`appid`='1000'  WHERE  `id` = 1 [ RunTime:0.000498s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:08:09+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/admin
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014115s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.028134s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` LIMIT 1 [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:10:24+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012393s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.028738s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.019973s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000418s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000380s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:10:49+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003896s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.023870s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `lists` [ RunTime:0.025714s ]
+[ sql ] [ SQL ] SELECT * FROM `lists` WHERE  `id` = 10 LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.019279s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `spid` = 10 LIMIT 1 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.018369s ]
+[ sql ] [ SQL ] INSERT INTO `orders` (`spid` , `order` , `money` , `time` , `pwd`) VALUES (10 , 'u6kra0Co1616382649' , 0.01 , 1 , '5156221@qq.com') [ RunTime:0.000968s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:11:01+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003253s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.025223s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000613s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.017989s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000404s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000289s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:11:15+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/get/bykm.edlm.cn?notify=ok&order=u6kra0Co1616382649&dh=637519794490000000&ltype=wxpay&lppwd=399c86d19128919296285c7e5936a14d&income=0.01
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014319s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.028877s ]
+[ sql ] [ SQL ] SELECT * FROM `orders` WHERE  `order` = 'u6kra0Co1616382649'  AND `win_order` IS NULL LIMIT 1 [ RunTime:0.001460s ]
+[ sql ] [ SQL ] SELECT * FROM `orders` WHERE  `win_order` = '637519794490000000' LIMIT 1 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.020332s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.019171s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `spid` = 10 LIMIT 1 [ RunTime:0.000474s ]
+[ sql ] [ SQL ] UPDATE `orders`  SET `win_order`='637519794490000000',`type`='wxpay'  WHERE  `id` = 45  AND `win_order` IS NULL  AND `type` IS NULL [ RunTime:0.000642s ]
+[ sql ] [ SQL ] UPDATE `kms`  SET `order`='u6kra0Co1616382649'  WHERE  `spid` = 10  AND `order` IS NULL  LIMIT 1 [ RunTime:0.007166s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.017863s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT * FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000530s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:11:36+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/?order=u6kra0Co1616382649
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012471s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.024090s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.019536s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000426s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000703s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:11:37+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003306s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.028096s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.001054s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:12:39+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004007s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.024015s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000599s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:17:36+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.023300s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.025428s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.018231s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000404s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000813s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:41:52+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004579s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.030207s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.018786s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000561s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.017339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000568s ]
+---------------------------------------------------------------
+[ 2021-03-22T11:48:44+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.005391s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.027327s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000500s ]
+---------------------------------------------------------------
+[ 2021-03-22T12:35:40+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.012657s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.024073s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.018413s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.017892s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000293s ]
+---------------------------------------------------------------
+[ 2021-03-22T14:06:52+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.005675s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.032185s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000690s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.031455s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000545s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.001628s ]
+---------------------------------------------------------------
+[ 2021-03-22T14:06:52+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.016194s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.032380s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.027540s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000524s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000767s ]
+---------------------------------------------------------------
+[ 2021-03-22T14:33:18+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004714s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.037968s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000508s ]
+---------------------------------------------------------------
+[ 2021-03-22T14:56:04+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.013109s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.028449s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[ 2021-03-22T14:58:48+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014587s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.030077s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000427s ]
+---------------------------------------------------------------
+[ 2021-03-22T16:46:48+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.024460s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.040910s ]
+[ sql ] [ SQL ] SELECT `km` FROM `kms` WHERE  `order` = 'u6kra0Co1616382649' [ RunTime:0.000472s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:42:47+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.029677s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.046077s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001840s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.075062s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000865s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.001777s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:43:02+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/admin
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003931s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.062301s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` LIMIT 1 [ RunTime:0.000934s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:43:07+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014976s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.033352s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.029300s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000449s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:46:25+08:00 ] 127.0.0.1 POST 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.005703s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.033237s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.025722s ]
+[ sql ] [ SQL ] UPDATE `config`  SET `title`='个人发卡网',`tail`='商业版3.5',`keywords`='个人,发卡网,自助提卡,卡密,商业版3.5,',`description`='EDLM个人发卡网（程序）是由MadDog,独自开发的一个站长收款免签约自助提卡系统,安全、稳定、不加收任何费用、直接到账、一站式售卡系统。',`gg`='欢迎使用2019全新EDLM个人发卡网商业版，官网:<a href=\"http://km.edlm.cn/\">km.edlm.cn</a> ！',`qq`='100000',`background`='images/bg-01.jpg'  WHERE  `id` = 1 [ RunTime:0.005314s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:46:27+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.002426s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.033188s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.029766s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000784s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:49:58+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.026867s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.050986s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.074266s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000430s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.045260s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000415s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:50:00+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004226s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.034235s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.028240s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000520s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:57:52+08:00 ] 127.0.0.1 POST 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003878s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.036487s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.024159s ]
+[ sql ] [ SQL ] UPDATE `config`  SET `title`='个人发卡网',`tail`='商业版3.5',`keywords`='个人,发卡网,自助提卡,卡密,商业版3.5,',`description`='EDLM个人发卡网（程序）是由MadDog,独自开发的一个站长收款免签约自助提卡系统,安全、稳定、不加收任何费用、直接到账、一站式售卡系统。',`gg`='欢迎使用2019全新EDLM个人发卡网商业版，官网:<a href=\"http://km.edlm.cn/\">km.edlm.cn</a> ！',`qq`='100000',`background`='images/bg-01.jpg'  WHERE  `id` = 1 [ RunTime:0.003725s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:57:55+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.002460s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.027814s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.020201s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000702s ]
+---------------------------------------------------------------
+[ 2021-03-22T20:58:04+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004793s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.037393s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.026580s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000402s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000669s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:05:23+08:00 ] 127.0.0.1 POST 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004224s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.039598s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.024467s ]
+[ sql ] [ SQL ] UPDATE `config`  SET `title`='个人发卡网',`tail`='商业版3.5',`keywords`='个人,发卡网,自助提卡,卡密,商业版3.5,',`description`='EDLM个人发卡网（程序）是由MadDog,独自开发的一个站长收款免签约自助提卡系统,安全、稳定、不加收任何费用、直接到账、一站式售卡系统。',`gg`='欢迎使用2019全新EDLM个人发卡网商业版，官网:<a href=\"http://km.edlm.cn/\">km.edlm.cn</a> ！',`qq`='1147828541',`background`='images/bg-01.jpg'  WHERE  `id` = 1 [ RunTime:0.004059s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:05:26+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/c
+[ sql ] [ DB ] CONNECT:[ UseTime:1.014856s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.048513s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.022875s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000685s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:34:20+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004027s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.034309s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.024622s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.024092s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000309s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:38:40+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.024753s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.034462s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.025545s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.026238s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000307s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:44:05+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.008998s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.052910s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.054746s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.055410s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000595s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:46:00+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/index
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003614s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.036488s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.024543s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'alipay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'wxpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `orders` WHERE  `type` = 'qqpay'  AND `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SELECT SUM(money) AS tp_sum FROM `orders` WHERE  `win_order` IS NOT NULL LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.024701s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `order` IS NULL LIMIT 1 [ RunTime:0.000358s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:49:35+08:00 ] 127.0.0.1 GET 127.0.0.1:1200/kmad/admin
+[ sql ] [ DB ] CONNECT:[ UseTime:1.002317s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.032577s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` LIMIT 1 [ RunTime:0.000342s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:50:16+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003749s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.030232s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.027286s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.001045s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000857s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:50:44+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.011491s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.036576s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.025400s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000592s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000456s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:50:57+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004529s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.039604s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.036724s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000636s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000402s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:51:07+08:00 ] 127.0.0.1 GET faka211.vaiwan.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:1.003584s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.042215s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `type` [ RunTime:0.023742s ]
+[ sql ] [ SQL ] SELECT * FROM `type` WHERE  `s` = 1 ORDER BY `or` DESC [ RunTime:0.000334s ]
+[ sql ] [ SQL ] select *,(select count(*) from kms where kms.spid = lists.id and kms.order IS NULL) AS count from lists where s = 1 ORDER BY `or` DESC [ RunTime:0.000254s ]
+---------------------------------------------------------------
+[ 2021-03-22T21:51:31+08:00 ] 127.0.0.1 POST faka211.vaiwan.com/post/bykm.edlm.cn
+[ sql ] [ DB ] CONNECT:[ UseTime:1.004257s ] mysql:host=localhost;port=3306;dbname=fkws;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.024935s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `lists` [ RunTime:0.027048s ]
+[ sql ] [ SQL ] SELECT * FROM `lists` WHERE  `id` = 10 LIMIT 1 [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `kms` [ RunTime:0.028338s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `kms` WHERE  `spid` = 10 LIMIT 1 [ RunTime:0.001006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `orders` [ RunTime:0.019534s ]
+[ sql ] [ SQL ] INSERT INTO `orders` (`spid` , `order` , `money` , `time` , `pwd`) VALUES (10 , 'S8xygOiF1616421091' , 0.01 , 1 , '123123123123') [ RunTime:0.000827s ]
